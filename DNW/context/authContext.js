@@ -1,13 +1,5 @@
-import {
-    createUserWithEmailAndPassword,
-    onAuthStateChanged,
-    signInWithEmailAndPassword,
-    signOut,
-} from "firebase/auth";
-import { createContext, useContext, useEffect, useState } from "react";
-import { auth, db } from "../config/firebase.config";
-import { doc, getDoc, setDoc } from "firebase/firestore";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { createContext, useContext, useEffect, useState } from "react";
 
 export const AuthContext = createContext();
 

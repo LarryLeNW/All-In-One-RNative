@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "DNW",
-    "slug": "dnw",
+    "slug": "ChatApp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/main.png",
@@ -12,6 +12,7 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.larrylenw.DNW"

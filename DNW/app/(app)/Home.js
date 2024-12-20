@@ -56,52 +56,91 @@ function Home() {
     return (
         <View className="flex-1  h-[100%]  gap-4 py-4 bg-neutral-300">
             <View className="flex justify-around flex-row flex-wrap  ">
-                <View className="flex gap-2 border-2 px-2 rounded border-orange-500 w-1/4 bg-white">
-                    <Text className="text-black font-bold text-sm">Tổng</Text>
-                    <Text className="font-bold text-orange-600">
-                        {orderStatistics?.total?.total_orders} đơn
+                <View className="flex gap-2 border-2 px-2 rounded border-green-500 w-1/4 bg-white">
+                    <Text className="text-black font-bold text-sm">Total</Text>
+                    <Text
+                        className="font-bold text-green-600 "
+                        style={{ fontSize: 12 }}
+                    >
+                        {orderStatistics?.total?.total_orders} orders
                     </Text>
                 </View>
                 <View className="flex gap-2 border-2 px-2 rounded border-orange-500 w-1/4 bg-white">
-                    <Text className="text-black font-bold text-sm">
-                        Hôm nay
+                    <Text
+                        className="text-black font-bold text-sm"
+                        style={{ fontSize: 12 }}
+                    >
+                        Today
                     </Text>
-                    <Text className="font-bold text-orange-600">
-                        {orderStatistics?.day?.total_orders} đơn
+                    <Text
+                        className="font-bold text-orange-600"
+                        style={{ fontSize: 12 }}
+                    >
+                        {orderStatistics?.day?.total_orders} orders
                     </Text>
                 </View>
                 <View className="flex gap-2 border-2 px-2 rounded border-yellow-500 w-1/4 bg-white">
-                    <Text className="text-black font-bold first-letter:text-sm">
-                        Hôm qua
+                    <Text
+                        className="text-black font-bold first-letter:text-sm"
+                        style={{ fontSize: 12 }}
+                    >
+                        Yesterday
                     </Text>
-                    <Text className="font-bold text-yellow-600">
-                        {orderStatistics?.yesterday?.total_orders} đơn
+                    <Text
+                        className="font-bold text-yellow-600"
+                        style={{ fontSize: 12 }}
+                    >
+                        {orderStatistics?.yesterday?.total_orders} orders
                     </Text>
                 </View>
             </View>
             <View className="flex justify-around flex-row flex-wrap gap-1 ">
                 <View className="flex gap-2 border-2 px-2 rounded border-blue-500 w-1/4 bg-white">
-                    <Text className="text-gray-700 text-sm">Tuần</Text>
-                    <Text className="font-bold text-blue-600">
-                        {orderStatistics?.week?.total_orders} đơn
+                    <Text
+                        className="text-gray-700 text-sm"
+                        style={{ fontSize: 12 }}
+                    >
+                        Week
+                    </Text>
+                    <Text
+                        className="font-bold text-blue-600"
+                        style={{ fontSize: 12 }}
+                    >
+                        {orderStatistics?.week?.total_orders} orders
                     </Text>
                 </View>
                 <View className="flex gap-2 border-2 px-2 rounded border-blue-500 w-1/4 bg-white">
-                    <Text className="text-gray-700 text-sm">Tháng</Text>
-                    <Text className="font-bold text-blue-600">
-                        {orderStatistics?.month?.total_orders} đơn
+                    <Text
+                        className="text-gray-700 text-sm"
+                        style={{ fontSize: 12 }}
+                    >
+                        Month
+                    </Text>
+                    <Text
+                        className="font-bold text-blue-600"
+                        style={{ fontSize: 12 }}
+                    >
+                        {orderStatistics?.month?.total_orders} orders
                     </Text>
                 </View>
-                <View className="flex gap-2 border-2 px-1 rounded border-blue-500 w-1/4 bg-white">
-                    <Text className="text-gray-700 text-sm  ">Tháng trước</Text>
-                    <Text className="font-bold text-blue-600">
-                        {orderStatistics?.last_month?.total_orders} đơn
+                <View className="flex gap-2 border-2 px-1 rounded border-blue-500 w-1/4 bg-white ">
+                    <Text
+                        className="text-gray-700 text-sm "
+                        style={{ fontSize: 12 }}
+                    >
+                        Last month
+                    </Text>
+                    <Text
+                        className="font-bold text-blue-600"
+                        style={{ fontSize: 12 }}
+                    >
+                        {orderStatistics?.last_month?.total_orders} orders
                     </Text>
                 </View>
             </View>
             <View className="bg-white rounded h-full ">
                 <View className="my-2 flex flex-row items-center">
-                    <Text className="font-bold ml-2 text-blue-600">
+                    <Text className="font-bold ml-2 text-green-600">
                         Thống kê
                     </Text>
                     <View className="items-center my-2 flex flex-row text-sm">

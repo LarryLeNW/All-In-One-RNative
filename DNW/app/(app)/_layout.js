@@ -15,6 +15,18 @@ export default function _layout() {
                     header: () => <Header />,
                 }}
             ></Stack.Screen>
+            <Stack.Screen
+                name="Top"
+                options={{
+                    header: () => <Header />,
+                }}
+            ></Stack.Screen>
+            <Stack.Screen
+                name="Event"
+                options={{
+                    header: () => <Header />,
+                }}
+            ></Stack.Screen>
         </Stack>
     );
 }
