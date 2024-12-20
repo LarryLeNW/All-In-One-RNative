@@ -17,6 +17,7 @@ import {
     MaterialIcons,
     SimpleLineIcons,
 } from "@expo/vector-icons";
+import { router } from "expo-router";
 const ios = Platform.OS == "ios";
 const Header = () => {
     const { top } = useSafeAreaInsets();
@@ -68,7 +69,7 @@ const Header = () => {
                     >
                         <MenuItem
                             text="Profile"
-                            action={alert}
+                            action={() => router.replace("Profile")}
                             value={null}
                             textColor={"text-blue-600"}
                             icon={
