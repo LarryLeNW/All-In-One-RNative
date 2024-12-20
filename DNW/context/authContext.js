@@ -7,6 +7,7 @@ import {
 import { createContext, useContext, useEffect, useState } from "react";
 import { auth, db } from "../config/firebase.config";
 import { doc, getDoc, setDoc } from "firebase/firestore";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export const AuthContext = createContext();
 
@@ -33,17 +34,14 @@ export const AuthContextProvider = ({ children }) => {
 
     const changeLoginData = async (data) => {
         setUser(data);
+        await AsyncStorage.setItem("userInfo", JSON.stringify(data));
         setIsAuthenticated(true);
     };
 
     const logout = async () => {
-        // try {
-        //     await signOut(auth);
-        //     return { success: true, msg: "See u again..." };
-        //     // handle
-        // } catch (error) {
-        //     return { success: false, msg: error.message };
-        // }
+        await AsyncStorage.removeItem("userInfo");
+        setUser(null);
+        setIsAuthenticated(false);
     };
 
     return (

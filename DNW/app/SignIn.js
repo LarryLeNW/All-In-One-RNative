@@ -17,8 +17,8 @@ import { useAuth } from "../context/authContext";
 
 function SignIn() {
     const router = useRouter();
-    const [email, setEmail] = useState("larrylenw@gmail.com");
-    const [password, setPassword] = useState("Batrinh@0611$");
+    const [email, setEmail] = useState("Khanh140204@gmail.com");
+    const [password, setPassword] = useState("Huukhanh@091024$");
     const [isLoading, setIsLoading] = useState(false);
     const { changeLoginData } = useAuth();
     const handleLogin = async () => {
@@ -43,8 +43,7 @@ function SignIn() {
             );
             changeLoginData(data);
         } catch (err) {
-            console.error("Error:", err);
-            setError("An error occurred. Please try again.");
+            Alert.alert("error", "Tài khoản hoặc mật khẩu sai...");
         }
         setIsLoading(false);
     };
